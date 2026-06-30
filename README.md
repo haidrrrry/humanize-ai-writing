@@ -61,9 +61,12 @@ file and it lists every AI tell with a line number and a fix:
 node bin/humanize-check.mjs your-draft.md
 # or pipe text in:
 cat draft.md | node bin/humanize-check.mjs
+# or run it from anywhere, no clone needed:
+npx -y github:haidrrrry/humanize-ai-writing your-draft.md
 ```
-Exit code is non-zero when tells are found, so you can wire it into CI or a
-pre-commit hook. See [EXAMPLES.md](EXAMPLES.md) for before/after rewrites.
+Exit code is non-zero when tells are found. Wire it into CI or a pre-commit hook
+with the ready-made [templates](templates/) (GitHub Action + git hook). See
+[EXAMPLES.md](EXAMPLES.md) for before/after rewrites.
 
 ## 🔍 Why this one
 
@@ -115,6 +118,8 @@ PROMPT.md                          # Universal paste-in system prompt (ChatGPT/G
 USAGE-IN-AI-TOOLS.md               # How to use it in 20+ tools (IDEs, CLIs, chat)
 EXAMPLES.md                        # Before/after slop rewrites
 bin/humanize-check.mjs             # Zero-dep CLI: scan text for AI tells
+templates/                         # GitHub Action + pre-commit hook
+launch/                            # Ready social posts (X, LinkedIn, Instagram)
 for-ai-tools/AGENTS.md             # Ready rules file (Cursor/Antigravity/Codex/Claude Code)
 INSTALL.md                         # Per-tool install + AI-agent install block
 install.sh                         # One-command installer for Claude Code/Desktop

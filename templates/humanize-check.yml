@@ -1,0 +1,38 @@
+# Humanize AI Writing — GitHub Action template
+#
+# Scans your Markdown content for AI-writing tells on every push / PR and fails
+# the build if it finds them. Copy this file to `.github/workflows/humanize-check.yml`
+# in YOUR repo, then edit CONTENT_GLOB to point at your prose.
+#
+# It runs the scanner straight from GitHub via npx — nothing to install or publish.
+
+name: humanize-check
+
+on:
+  push:
+    paths: ["**/*.md"]
+  pull_request:
+    paths: ["**/*.md"]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Scan content for AI slop
+        env:
+          # Edit this to match where your writing lives.
+          CONTENT_GLOB: "content/**/*.md blog/**/*.md docs/**/*.md"
+        run: |
+          shopt -s globstar nullglob
+          files=$(ls $CONTENT_GLOB 2>/dev/null || true)
+          if [ -z "$files" ]; then
+            echo "No content files matched CONTENT_GLOB ($CONTENT_GLOB) — nothing to scan."
+            exit 0
+          fi
+          echo "Scanning: $files"
+          npx -y github:haidrrrry/humanize-ai-writing $files

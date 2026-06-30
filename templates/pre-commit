@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Humanize AI Writing — git pre-commit hook
+#
+# Blocks a commit if staged Markdown contains AI-writing tells.
+# Install:
+#   cp templates/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+# Bypass once (when you know better):
+#   git commit --no-verify
+
+set -euo pipefail
+
+# staged text files (added/changed)
+files=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(md|markdown|txt)$' || true)
+[ -z "$files" ] && exit 0
+
+# Prefer a local copy of the scanner; otherwise run it from GitHub via npx.
+if [ -f "bin/humanize-check.mjs" ]; then
+  scan() { node bin/humanize-check.mjs "$@"; }
+else
+  scan() { npx -y github:haidrrrry/humanize-ai-writing "$@"; }
+fi
+
+echo "humanize-check: scanning staged prose..."
+if ! scan $files; then
+  echo ""
+  echo "AI tells found in staged files. Fix them, or commit with --no-verify to skip."
+  exit 1
+fi
