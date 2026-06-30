@@ -1,0 +1,38 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1280px; height:640px; }
+  body {
+    font-family: -apple-system, "Segoe UI", Inter, Roboto, sans-serif;
+    background: radial-gradient(1200px 700px at 80% -10%, #6D28D9 0%, transparent 60%),
+                linear-gradient(135deg, #1E1B4B 0%, #312E81 55%, #4F46E5 100%);
+    color:#fff; display:flex; align-items:center; gap:48px; padding:0 70px; overflow:hidden;
+  }
+  .logo { width:212px; height:212px; flex:0 0 auto; filter: drop-shadow(0 18px 40px rgba(0,0,0,.35)); }
+  .logo svg { width:100%; height:100%; display:block; }
+  .right { display:flex; flex-direction:column; gap:16px; max-width:720px; min-width:0; }
+  .kicker { font-size:21px; letter-spacing:3px; text-transform:uppercase; color:#C4B5FD; font-weight:600; }
+  h1 { font-size:62px; line-height:1.02; font-weight:800; letter-spacing:-1.5px; }
+  h1 .slop { color:#A78BFA; text-decoration: line-through; text-decoration-thickness:5px; text-decoration-color:#F472B6; }
+  p { font-size:27px; color:#E0E7FF; font-weight:500; }
+  .tools { display:flex; gap:12px; flex-wrap:wrap; margin-top:4px; }
+  .chip { font-size:20px; font-weight:600; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.22);
+          padding:7px 16px; border-radius:999px; }
+  .foot { margin-top:12px; font-size:22px; color:#C7D2FE; font-weight:600; }
+</style></head>
+<body>
+  <div class="logo" id="logo"></div>
+  <div class="right">
+    <div class="kicker">Open-source · MIT</div>
+    <h1>Humanize<br>AI Writing</h1>
+    <p>Kill the <span class="slop">AI&nbsp;slop</span>. Make any model write like a human.</p>
+    <div class="tools">
+      <span class="chip">ChatGPT</span><span class="chip">Claude</span><span class="chip">Gemini</span>
+      <span class="chip">Grok</span><span class="chip">Kimi</span><span class="chip">DeepSeek</span>
+    </div>
+    <div class="foot">github.com/haidrrrry/humanize-ai-writing</div>
+  </div>
+  <script>
+    fetch('logo.svg').then(r=>r.text()).then(s=>{document.getElementById('logo').innerHTML=s;});
+  </script>
+</body></html>

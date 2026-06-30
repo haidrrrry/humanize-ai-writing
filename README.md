@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/logo.png" alt="Humanize AI Writing logo" width="140">
+</p>
+
 # Humanize AI Writing — Anti-AI-Slop Prompt & Skill for ChatGPT, Claude, Gemini, Grok & Kimi
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -41,6 +45,15 @@ ChatGPT, Claude (web/Desktop/Code), Gemini, Grok, Kimi, DeepSeek, Perplexity, an
 | "fast, scalable, and future-proof" | "cheaper, and it scales" |
 | Em dashes everywhere — like this — constantly | one, only when it earns it |
 | "In conclusion, the future is bright." | (ends on the last real point) |
+
+## 🔍 Why this one
+
+There are other humanizer repos. This one is built to be **portable and zero-friction**:
+
+- **Every tool, one ruleset.** The same rules ship as a paste-in `PROMPT.md` (ChatGPT, Gemini, Grok, Kimi, DeepSeek) *and* a native Claude skill. Learn it once.
+- **One-command install** for Claude, plus an [`INSTALL.md`](INSTALL.md) block written **for AI agents** — so you can tell your assistant "add this skill" and it just does it.
+- **Sourced, not vibes.** Rules map directly to [Wikipedia's "Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), with a fix and before/after for each tell.
+- **Honest scope.** It strips human-visible slop and known tells. It does not claim to "beat AI detectors" — those measure token statistics, a different thing.
 
 ## 🚀 Install
 
