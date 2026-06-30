@@ -1,0 +1,30 @@
+{
+  "name": "humanize-ai-writing",
+  "version": "1.0.0",
+  "description": "Anti-AI-slop prompt and skill that makes any AI tool write like a human. Includes a zero-dependency CLI that scans text for AI-writing tells.",
+  "type": "module",
+  "bin": {
+    "humanize-check": "bin/humanize-check.mjs"
+  },
+  "scripts": {
+    "check": "node bin/humanize-check.mjs"
+  },
+  "keywords": [
+    "humanize-ai", "ai-writing", "ai-slop", "anti-ai-detection", "chatgpt",
+    "claude", "gemini", "grok", "kimi", "prompt-engineering", "writing", "llm"
+  ],
+  "homepage": "https://github.com/haidrrrry/humanize-ai-writing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haidrrrry/humanize-ai-writing.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin/",
+    "PROMPT.md",
+    "humanize-ai-writing/"
+  ]
+}

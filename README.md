@@ -52,6 +52,19 @@ ChatGPT, Claude (web/Desktop/Code), Gemini, Grok, Kimi, DeepSeek, Perplexity, an
 | Em dashes everywhere — like this — constantly | none; a comma, period, or colon |
 | "In conclusion, the future is bright." | (ends on the last real point) |
 
+## 🔧 Check your draft (CLI)
+
+A zero-dependency scanner ships with the repo. Point it at any text or markdown
+file and it lists every AI tell with a line number and a fix:
+
+```bash
+node bin/humanize-check.mjs your-draft.md
+# or pipe text in:
+cat draft.md | node bin/humanize-check.mjs
+```
+Exit code is non-zero when tells are found, so you can wire it into CI or a
+pre-commit hook. See [EXAMPLES.md](EXAMPLES.md) for before/after rewrites.
+
 ## 🔍 Why this one
 
 There are other humanizer repos. This one is built to be **portable and zero-friction**:
@@ -100,6 +113,8 @@ INSTALL-FOR-AI.md                  # AI reads this and self-installs into its ow
 llms.txt                           # AI-discovery pointer to INSTALL-FOR-AI.md
 PROMPT.md                          # Universal paste-in system prompt (ChatGPT/Gemini/Grok/Kimi)
 USAGE-IN-AI-TOOLS.md               # How to use it in 20+ tools (IDEs, CLIs, chat)
+EXAMPLES.md                        # Before/after slop rewrites
+bin/humanize-check.mjs             # Zero-dep CLI: scan text for AI tells
 for-ai-tools/AGENTS.md             # Ready rules file (Cursor/Antigravity/Codex/Claude Code)
 INSTALL.md                         # Per-tool install + AI-agent install block
 install.sh                         # One-command installer for Claude Code/Desktop
