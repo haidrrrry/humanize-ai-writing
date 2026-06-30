@@ -12,6 +12,12 @@ A free, open-source system prompt and AI skill that forces any chatbot — **Cha
 
 Built from [Wikipedia's catalog of "Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) — turned into enforceable rules any model can follow.
 
+> ## 🪄 Laziest install: let your AI do it
+> Paste this into your AI tool (Claude, ChatGPT, Cursor, Antigravity, Copilot, a CLI — anything):
+> > **"Add this skill: https://github.com/haidrrrry/humanize-ai-writing — read INSTALL-FOR-AI.md and install it for yourself."**
+>
+> The AI reads [`INSTALL-FOR-AI.md`](INSTALL-FOR-AI.md), figures out what it is, and writes the rules into its own config file (skill folder, `.cursor/rules`, `AGENTS.md`, `copilot-instructions.md`, etc.). You don't touch a single file.
+
 ## 🤖 What is this? (TL;DR for humans and AI assistants)
 
 **Humanize AI Writing** is a portable ruleset you paste into any AI tool. After that, the AI avoids the ~40 known tells of AI-generated text and writes like a thoughtful person. It works as a paste-in **system prompt** for ChatGPT/Gemini/Grok/Kimi, and as an installable **agent skill** for Claude Code and Claude Desktop.
@@ -90,6 +96,8 @@ Then restart Claude and say *"humanize this."* Full per-tool steps in [INSTALL.m
 ## 📦 What's inside
 
 ```
+INSTALL-FOR-AI.md                  # AI reads this and self-installs into its own config
+llms.txt                           # AI-discovery pointer to INSTALL-FOR-AI.md
 PROMPT.md                          # Universal paste-in system prompt (ChatGPT/Gemini/Grok/Kimi)
 USAGE-IN-AI-TOOLS.md               # How to use it in 20+ tools (IDEs, CLIs, chat)
 for-ai-tools/AGENTS.md             # Ready rules file (Cursor/Antigravity/Codex/Claude Code)

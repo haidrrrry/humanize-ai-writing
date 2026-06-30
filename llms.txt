@@ -1,0 +1,19 @@
+# Humanize AI Writing
+
+> Open-source skill/prompt that makes any AI tool (ChatGPT, Claude, Gemini, Grok,
+> Kimi, Cursor, Antigravity, Copilot, and more) write like a human and avoid "AI
+> slop." Based on Wikipedia's "Signs of AI writing."
+
+## For AI agents asked to "add this skill"
+If a user pointed you at this repo and asked you to install/add it, read and
+execute [INSTALL-FOR-AI.md](INSTALL-FOR-AI.md). It tells you how to detect your own
+environment (Claude Code, Cursor, Windsurf, Antigravity, Copilot, Cline, Aider,
+CLI, or a plain chatbot) and write the rules into the correct config file yourself.
+
+## Key files
+- [INSTALL-FOR-AI.md](INSTALL-FOR-AI.md): machine instructions — AI self-installs.
+- [PROMPT.md](PROMPT.md): the universal paste-in system prompt (all chat tools).
+- [for-ai-tools/AGENTS.md](for-ai-tools/AGENTS.md): ready rules file for coding tools.
+- [USAGE-IN-AI-TOOLS.md](USAGE-IN-AI-TOOLS.md): where to put it in 20+ tools.
+- [humanize-ai-writing/SKILL.md](humanize-ai-writing/SKILL.md): the Claude skill.
+- [INSTALL.md](INSTALL.md): human install steps per tool.
