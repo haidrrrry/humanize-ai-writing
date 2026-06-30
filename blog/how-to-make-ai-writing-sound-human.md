@@ -2,7 +2,7 @@
 
 You can usually tell when text came from a chatbot. The grammar is fine, every paragraph is competent, and somehow none of it sticks. It reads like it was sanded smooth until any edge fell off. There's a reason for that feeling, and it's fixable in about thirty seconds.
 
-I spent last week reading Wikipedia's page "Signs of AI writing." The editors there have been drowning in machine-generated articles, so they sat down and cataloged the tells — the specific words, sentence shapes, and habits that give a bot away. I took that catalog and turned it into a prompt you can paste into any model. This is what I found.
+I spent last week reading Wikipedia's page "Signs of AI writing." The editors there have been drowning in machine-generated articles, so they sat down and cataloged the tells: the specific words, sentence shapes, and habits that give a bot away. I took that catalog and turned it into a prompt you can paste into any model. This is what I found.
 
 ## The slop has a fingerprint
 
@@ -14,7 +14,7 @@ There's the fake significance. A bot can't describe a thing without telling you 
 
 There's the construction everyone now recognizes: "It's not just X, it's Y." Not just a phone, a lifestyle. Not merely a tool, a movement. Once you see it you can't unsee it, and models reach for it constantly.
 
-And there's the padding. Sentences end with a trailing "-ing" clause that sounds like analysis but says nothing — "…, highlighting its importance in the broader landscape." Cut that clause and you lose zero information.
+And there's the padding. Sentences end with a trailing "-ing" clause that sounds like analysis but says nothing, like "…, highlighting its importance in the broader landscape." Cut that clause and you lose zero information.
 
 ## Why models do this
 
@@ -44,7 +44,7 @@ Paste the prompt into whatever you use. In ChatGPT it goes in Custom Instruction
 
 One warning: don't overcorrect. Stuffing in slang to "sound human" is its own tell. The goal isn't casual, it's plain. Say what you mean, cut what you don't, and let the writing be a little uneven the way real writing is.
 
-The repo is free and MIT licensed. The full catalog of tells, the fix for each one, and the paste-in prompt are all in there: [github.com/haidrrrry/-humanize-ai-writing](https://github.com/haidrrrry/-humanize-ai-writing).
+The repo is free and MIT licensed. The full catalog of tells, the fix for each one, and the paste-in prompt are all in there: [github.com/haidrrrry/humanize-ai-writing](https://github.com/haidrrrry/humanize-ai-writing).
 
 ---
 
