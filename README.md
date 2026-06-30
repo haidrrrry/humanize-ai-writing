@@ -65,6 +65,8 @@ Then restart Claude and say *"humanize this."* Full per-tool steps in [INSTALL.m
 
 > ⚠️ **Only Claude has a "Skills" feature.** ChatGPT, Gemini, and Grok **cannot load a skill file** — there's nowhere to upload it. For those tools you **paste** [`PROMPT.md`](PROMPT.md) instead. Trying to install a skill in ChatGPT is the #1 "it doesn't work" mistake. Full steps: [INSTALL.md](INSTALL.md).
 
+> 🧩 **Not a Claude user?** It works in **20+ tools** — Cursor, Windsurf, Google Antigravity, GitHub Copilot, Cline, Aider, ChatGPT, Gemini, Grok, Kimi, DeepSeek, Perplexity and more. See [**USAGE-IN-AI-TOOLS.md**](USAGE-IN-AI-TOOLS.md) for the exact slot in each. For coding tools, copy [`for-ai-tools/AGENTS.md`](for-ai-tools/AGENTS.md) to your project root — Antigravity, Cursor, Codex, Claude Code and opencode all read it at once.
+
 ### Claude — install as a skill (auto-triggers)
 - **Claude Code / Desktop:** run the one-command installer above, or:
   ```bash
@@ -89,6 +91,8 @@ Then restart Claude and say *"humanize this."* Full per-tool steps in [INSTALL.m
 
 ```
 PROMPT.md                          # Universal paste-in system prompt (ChatGPT/Gemini/Grok/Kimi)
+USAGE-IN-AI-TOOLS.md               # How to use it in 20+ tools (IDEs, CLIs, chat)
+for-ai-tools/AGENTS.md             # Ready rules file (Cursor/Antigravity/Codex/Claude Code)
 INSTALL.md                         # Per-tool install + AI-agent install block
 install.sh                         # One-command installer for Claude Code/Desktop
 humanize-ai-writing.zip            # Upload-ready bundle for claude.ai
